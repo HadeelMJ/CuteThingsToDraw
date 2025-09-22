@@ -1,295 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css">
-    <title>Draw & Learn </title>
-    
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>Draw & Learn</title>
 </head>
 
 <body>
+  <header>
+    <h1>🎨 🖌 Cute Things to Draw</h1>
+    <div class="tag">🎨 Tap to Reveal Steps - Keep drawing and have fun! 🖌</div>
+  </header>
+
+  <!-- Home view: covers in 4 columns -->
+  <main id="home">
+    <div class="covers">
+      <figure class="cover-card" data-lesson="burger">
+        <img src="images/d1-1.png" />
+        <figcaption class="title">🍔 Burger Buddy</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="taco">
+        <img src="images/d2-1.png" />
+        <figcaption class="title">🌮 Taco Pal</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="avocado">
+        <img src="images/d3-1.png" />
+        <figcaption class="title">🥑 Avocado Amigos</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="icecream">
+        <img src="images/d8-1.png" />
+        <figcaption class="title">🍦 Ice Cream Cone</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="cake">
+        <img src="images/d9-1.png" />
+        <figcaption class="title">🍰 Cake Slice</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="pineapple">
+        <img src="images/d10-1.png" />
+        <figcaption class="title">🍍 Pineapple Pal</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="koala">
+        <img src="images/d11-1.png" />
+        <figcaption class="title">🩶 Koala Cutie</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="bee">
+        <img src="images/d12-1.png" />
+        <figcaption class="title">🐝 Buzzy Butterfly Bee</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="teapot">
+        <img src="images/d5-1.png" />
+        <figcaption class="title">☕️ Teapot</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="ladybug">
+        <img src="images/d6-1.png" />
+        <figcaption class="title">🐞 Ladybug</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="fairyhouse">
+        <img src="images/d7-1.png" />
+        <figcaption class="title">🧚‍🏠 Fairy House</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+      <figure class="cover-card" data-lesson="books">
+        <img src="images/d4-1.png" />
+        <figcaption class="title">📚 Books</figcaption>
+        <div class="tap bounce">Tap to learn</div>
+      </figure>
+    </div>
+  </main>
+
+  <!-- Lesson view -->
+  <section id="lesson" class="lesson">
     <header>
-        <h1>🎨 🖌 Cute Things to Draw</h1>
-        <div class="tag">🎨 Tap to Reveal Steps - Keep drawing and have fun! 🖌</div>
+      <strong id="lessonTitle">Lesson</strong>
+      <button class="btn" id="btnBack">⟵ Back to covers</button>
     </header>
+    <div class="grid" id="grid"></div>
+  </section>
 
-    <!-- Home view: eight clickable covers in 4 columns -->
-    <main id="home">
-        <div class="covers">
-            <figure class="cover-card" tabindex="0" data-lesson="burger" aria-label="Burger cover: tap to see steps">
-                <img src="images/d1-1.png" alt="Burger cover" />
-                <figcaption class="title">🍔 Burger Buddy</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="taco" aria-label="Taco cover: tap to see steps">
-                <img src="images/d2-1.png" alt="Taco cover" />
-                <figcaption class="title">🌮 Taco Pal</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="avocado" aria-label="Avocado cover: tap to see steps">
-                <img src="images/d3-1.png" alt="Avocado cover" />
-                <figcaption class="title">🥑 Avocado Amigos</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="icecream" aria-label="Ice cream cover: tap to see steps">
-                <img src="images/d8-1.png" alt="Ice cream cover" />
-                <figcaption class="title">🍦 Ice Cream Cone</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="cake" aria-label="Cake cover: tap to see steps">
-                <img src="images/d9-1.png" alt="Cake cover" />
-                <figcaption class="title">🍰 Cake Slice</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="pineapple" aria-label="Pineapple cover: tap to see steps">
-                <img src="images/d10-1.png" alt="Pineapple cover" />
-                <figcaption class="title">🍍 Pineapple Pal</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="koala" aria-label="Koala cover: tap to see steps">
-                <img src="images/d11-1.png" alt="Koala cover" />
-                <figcaption class="title">🩶 Koala Cutie</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="bee" aria-label="Bee cover: tap to see steps">
-                <img src="images/d12-1.png" alt="Bee cover" />
-                <figcaption class="title">🐝 Buzzy Butterfly Bee</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="teapot" aria-label="teapot cover: tap to see steps">
-                <img src="images/d5-1.png" alt="teapot cover" />
-                <figcaption class="title">☕️ Teapot</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
-            <figure class="cover-card" tabindex="0" data-lesson="ladybug" aria-label="ladybug cover: tap to see steps">
-                <img src="images/d6-1.png" alt="ladybug cover" />
-                <figcaption class="title">🐞 Ladybug</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
+  <script>
+    // tiny helper to generate file paths like images/d1-1.png ... images/d1-7.png
+    const g = (code, n) => Array.from({ length: n }, (_, i) => `images/${code}-${i + 1}.png`);
 
-            <figure class="cover-card" tabindex="0" data-lesson="fairyhouse" aria-label="fairyhouse cover: tap to see steps">
-                <img src="images/d7-1.png" alt="FairyHouse cover" />
-                <figcaption class="title">🧚‍🏠 Fairy House</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
+    const LESSONS = {
+      burger:     { title: "🍔 Burger Buddy — Steps",     files: g('d1', 7)  },
+      taco:       { title: "🌮 Taco Pal — Steps",          files: g('d2', 7)  },
+      avocado:    { title: "🥑 Avocado Amigos — Steps",    files: g('d3', 7)  },
+      icecream:   { title: "🍦 Ice Cream Cone — Steps",    files: g('d8', 7)  },
+      cake:       { title: "🍰 Cake Slice — Steps",        files: g('d9', 7)  },
+      pineapple:  { title: "🍍 Pineapple Pal — Steps",     files: g('d10', 7) },
+      koala:      { title: "🩶 Koala Cutie — Steps",       files: g('d11', 7) },
+      bee:        { title: "🐝 Buzzy Butterfly Bee — Steps", files: g('d12', 7)},
+      teapot:     { title: "☕️ Teapot — Steps",            files: g('d5', 7)  },
+      ladybug:    { title: "🐞 Ladybug — Steps",           files: g('d6', 7)  },
+      fairyhouse: { title: "🧚‍🏠 Fairy House — Steps",     files: g('d7', 7)  },
+      books:      { title: "📚 Books — Steps",             files: g('d4', 7)  }
+    };
 
-            <figure class="cover-card" tabindex="0" data-lesson="books" aria-label="books cover: tap to see steps">
-                <img src="images/d4-1.png" alt="FairyHouse cover" />
-                <figcaption class="title">📚 Books</figcaption>
-                <div class="tap bounce">Tap to learn</div>
-            </figure>
+    const home = document.getElementById('home');
+    const lesson = document.getElementById('lesson');
+    const grid = document.getElementById('grid');
+    const lessonTitle = document.getElementById('lessonTitle');
+    const btnBack = document.getElementById('btnBack');
+
+    function buildGrid(files) {
+      // skip the first (cover) image
+      grid.innerHTML = files.slice(1).map((src, i) => `
+        <div class="thumb">
+          <img src="${src}">
+          <div class="badge">Step ${i + 1}</div>
         </div>
-    </main>
+      `).join('');
+    }
 
-    <!-- Lesson view (reused container) -->
-    <section id="lesson" class="lesson" aria-live="polite">
-        <header>
-            <strong id="lessonTitle">Lesson</strong>
-            <button class="btn" id="btnBack">⟵ Back to covers</button>
-        </header>
-        <div class="grid" id="grid"></div>
-    </section>
+    function openLesson(key) {
+      const d = LESSONS[key];
+      if (!d) return;
+      lessonTitle.textContent = d.title;
+      buildGrid(d.files);
+      home.style.display = 'none';
+      lesson.style.display = 'block';
+    }
 
-    <script>
-        const LESSONS = {
-            "burger": {
-                "title": "🍔 Burger Buddy — Steps",
-                "files": [
-                    "images/d1-1.png",
-                    "images/d1-2.png",
-                    "images/d1-3.png",
-                    "images/d1-4.png",
-                    "images/d1-5.png",
-                    "images/d1-6.png",
-                    "images/d1-7.png"
-                ]
-            },
-            "taco": {
-                "title": "🌮 Taco Pal — Steps",
-                "files": [
-                    "images/d2-1.png",
-                    "images/d2-2.png",
-                    "images/d2-3.png",
-                    "images/d2-4.png",
-                    "images/d2-5.png",
-                    "images/d2-6.png",
-                    "images/d2-7.png"
-                ]
-            },
-            "avocado": {
-                "title": "🥑 Avocado Amigos — Steps",
-                "files": [
-                    "images/d3-1.png",
-                    "images/d3-2.png",
-                    "images/d3-3.png",
-                    "images/d3-4.png",
-                    "images/d3-5.png",
-                    "images/d3-6.png",
-                    "images/d3-7.png"
-                ]
-            },
-            "icecream": {
-                "title": "🍦 Ice Cream Cone — Steps",
-                "files": [
-                    "images/d8-1.png",
-                    "images/d8-2.png",
-                    "images/d8-3.png",
-                    "images/d8-4.png",
-                    "images/d8-5.png",
-                    "images/d8-6.png",
-                    "images/d8-7.png"
-                ]
-            },
-            "cake": {
-                "title": "🍰 Cake Slice — Steps",
-                "files": [
-                    "images/d9-1.png",
-                    "images/d9-2.png",
-                    "images/d9-3.png",
-                    "images/d9-4.png",
-                    "images/d9-5.png",
-                    "images/d9-6.png",
-                    "images/d9-7.png"
-                ]
-            },
-            "pineapple": {
-                "title": "🍍 Pineapple Pal — Steps",
-                "files": [
-                    "images/d10-1.png",
-                    "images/d10-2.png",
-                    "images/d10-3.png",
-                    "images/d10-4.png",
-                    "images/d10-5.png",
-                    "images/d10-6.png",
-                    "images/d10-7.png"
-                ]
-            },
-            "koala": {
-                "title": "🩶 Koala Cutie — Steps",
-                "files": [
-                    "images/d11-1.png",
-                    "images/d11-2.png",
-                    "images/d11-3.png",
-                    "images/d11-4.png",
-                    "images/d11-5.png",
-                    "images/d11-6.png",
-                    "images/d11-7.png"
-                ]
-            },
-            "bee": {
-                "title": "🐝 Buzzy Butterfly Bee — Steps",
-                "files": [
-                    "images/d12-1.png",
-                    "images/d12-2.png",
-                    "images/d12-3.png",
-                    "images/d12-4.png",
-                    "images/d12-5.png",
-                    "images/d12-6.png",
-                    "images/d12-7.png"
-                ]
-            },
-            "teapot": {
-                "title": "☕️ Teapot — Steps",
-                "files": [
-                    "images/d5-1.png",
-                    "images/d5-2.png",
-                    "images/d5-3.png",
-                    "images/d5-4.png",
-                    "images/d5-5.png",
-                    "images/d5-6.png",
-                    "images/d5-7.png"
-                ]
-            },
-            "ladybug": {
-                "title": "🐞 Ladybug — Steps",
-                "files": [
-                    "images/d6-1.png",
-                    "images/d6-2.png",
-                    "images/d6-3.png",
-                    "images/d6-4.png",
-                    "images/d6-5.png",
-                    "images/d6-6.png",
-                    "images/d6-7.png"
-                ]
-            },
-            "fairyhouse": {
-                "title": "🧚‍🏠 Fairy House — Steps",
-                "files": [
-                    "images/d7-1.png",
-                    "images/d7-2.png",
-                    "images/d7-3.png",
-                    "images/d7-4.png",
-                    "images/d7-5.png",
-                    "images/d7-6.png",
-                    "images/d7-7.png"
-                ]
-            },
-            "books": {
-                "title": "📚 Books — Steps",
-                "files": [
-                    "images/d4-1.png",
-                    "images/d4-2.png",
-                    "images/d4-3.png",
-                    "images/d4-4.png",
-                    "images/d4-5.png",
-                    "images/d4-6.png",
-                    "images/d4-7.png"
-                ]
-            }
+    function backHome() {
+      lesson.style.display = 'none';
+      home.style.display = 'flex';
+    }
 
-        };
+    document.querySelectorAll('.cover-card').forEach(card => {
+      card.addEventListener('click', () => openLesson(card.dataset.lesson));
+    });
 
-        const home = document.getElementById('home');
-        const lesson = document.getElementById('lesson');
-        const grid = document.getElementById('grid');
-        const lessonTitle = document.getElementById('lessonTitle');
-        const btnBack = document.getElementById('btnBack');
-
-        function buildGrid(files) {
-            grid.innerHTML = '';
-            files.slice(1).forEach((src, i) => {
-                const card = document.createElement('div');
-                card.className = 'thumb';
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = 'Step ' + (i + 1);
-                const badge = document.createElement('div');
-                badge.className = 'badge';
-                badge.textContent = 'Step ' + (i + 1);
-                card.appendChild(img);
-                card.appendChild(badge);
-                grid.appendChild(card);
-            });
-        }
-
-        function openLesson(key) {
-            const data = LESSONS[key];
-            if (!data || !data.files || !data.files.length) return;
-            lessonTitle.textContent = data.title;
-            buildGrid(data.files);
-            home.style.display = 'none';
-            lesson.style.display = 'block';
-        }
-
-        function backHome() {
-            lesson.style.display = 'none';
-            home.style.display = 'flex';
-            const firstCover = document.querySelector('.cover-card');
-            if (firstCover) firstCover.focus();
-        }
-
-        document.querySelectorAll('.cover-card').forEach(card => {
-            card.addEventListener('click', () => openLesson(card.dataset.lesson));
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') openLesson(card.dataset.lesson);
-            });
-        });
-
-        btnBack.addEventListener('click', backHome);
-
-    </script>
+    btnBack.addEventListener('click', backHome);
+  </script>
 </body>
-
 </html>
